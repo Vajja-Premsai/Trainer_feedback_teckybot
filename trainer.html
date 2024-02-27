@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <title>Trainer Feedback Survey</title>
+    <style>
+      /* Add custom styles here */
+      body {
+        background-color: #f8f9fa; /* Set a light background color */
+      }
+      .border-container {
+        border: 1px solid #ced4da;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 20px 3px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container mt-5">
+      <div class="row justify-content-md-center">
+        <div class="col-md-7 border-container">
+          <h2 class="mb-4">Trainer Feedback Survey</h2>
+
+          <form action="submit_survey.php" method="post">
+            <div class="form-group mb-4">
+              <label for="trainerName">1. Trainer's Name:</label>
+              <input
+                type="text"
+                name="trainerName"
+                class="form-control"
+                id="trainerName"
+                placeholder="Enter trainer's name"
+              />
+            </div>
+
+            <div class="form-group mb-4">
+              <label
+                >2. How effective was the trainer in delivering the
+                content?</label
+              >
+              <select
+                class="form-control"
+                id="effectiveness"
+                name="effectiveness"
+              >
+                <option value="5">5 - Extremely Effective</option>
+                <option value="4">4 - Very Effective</option>
+                <option value="3">3 - Moderately Effective</option>
+                <option value="2">2 - Slightly Effective</option>
+                <option value="1">1 - Not Effective at All</option>
+              </select>
+            </div>
+
+            <div class="form-group mb-4">
+              <label
+                >3. How would you rate the trainer's communication
+                skills?</label
+              >
+              <select
+                class="form-control"
+                id="communication"
+                name="communication"
+              >
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Very Good</option>
+                <option value="3">3 - Good</option>
+                <option value="2">2 - Fair</option>
+                <option value="1">1 - Poor</option>
+              </select>
+            </div>
+
+            <div class="form-group mb-4">
+              <label
+                >4. Were the training sessions interactive and engaging?</label
+              >
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="interactive"
+                  id="interactiveYes"
+                  value="yes"
+                />
+                <label class="form-check-label" for="interactiveYes">Yes</label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="interactive"
+                  id="interactiveNo"
+                  value="no"
+                />
+                <label class="form-check-label" for="interactiveNo">No</label>
+              </div>
+            </div>
+
+            <div class="form-group mb-4">
+              <label
+                >5. How well was the content organized and presented?</label
+              >
+              <select
+                class="form-control"
+                id="organization"
+                name="organization"
+              >
+                <option value="5">5 - Very Well Organized</option>
+                <option value="4">4 - Well Organized</option>
+                <option value="3">3 - Adequately Organized</option>
+                <option value="2">2 - Somewhat Disorganized</option>
+                <option value="1">1 - Very Disorganized</option>
+              </select>
+            </div>
+            <div class="form-group mb-4">
+              <label>6. Would you recommend this trainer to others?</label>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="recommend"
+                  id="recommendYes"
+                  value="yes"
+                />
+                <label class="form-check-label" for="recommendYes">Yes</label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="recommend"
+                  id="recommendNo"
+                  value="no"
+                />
+                <label class="form-check-label" for="recommendNo">No</label>
+              </div>
+            </div>
+
+            <div class="form-group mb-4">
+              <label for="rating">7. Rating:</label>
+              <select class="form-control" id="rating" name="rating">
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Very Good</option>
+                <option value="3">3 - Good</option>
+                <option value="2">2 - Fair</option>
+                <option value="1">1 - Poor</option>
+              </select>
+            </div>
+
+            <div class="form-group mb-4">
+              <label
+                >8. Overall, how satisfied are you with the training?</label
+              >
+              <select
+                class="form-control"
+                id="satisfaction"
+                name="satisfaction"
+              >
+                <option value="5">5 - Very Satisfied</option>
+                <option value="4">4 - Satisfied</option>
+                <option value="3">3 - Neutral</option>
+                <option value="2">2 - Dissatisfied</option>
+                <option value="1">1 - Very Dissatisfied</option>
+              </select>
+            </div>
+            <div class="form-group mb-4">
+              <label for="feedback">9. Feedback:</label>
+              <textarea
+                class="form-control"
+                id="feedback"
+                name="feedback"
+                rows="4"
+                placeholder="Provide your feedback"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
